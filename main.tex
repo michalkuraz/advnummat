@@ -1,0 +1,229 @@
+\documentclass[12pt,oneside]{book}
+\usepackage[vcentering,dvips]{geometry}
+\geometry{papersize={210mm,297mm},total={165mm,230mm}}
+\special{pdf: pagesize width 165mm height 230mm}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{fancyhdr}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{graphics}
+\usepackage{fancyhdr}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{tabularx}
+
+\usepackage{titleref}
+\usepackage{multirow} 
+\usepackage{url}
+\usepackage{picture}
+\usepackage{verbatim}
+\usepackage{xfrac}
+\usepackage{makecell}
+\usepackage[running, displaymath, mathlines]{lineno}
+% \linenumbers
+% \linenumbers
+
+
+\usepackage[font={footnotesize}, bf]{caption}
+\usepackage[pdf]{pstricks}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor   = red %Colour of citations
+}
+\usepackage{appendix}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% \usepackage[czech]{babel}
+% \languageattribute{czech}{split}
+
+\usepackage{tikz}
+    \usetikzlibrary{patterns}
+    \usepackage{pgfplots}
+
+\usepackage{nicefrac}
+    
+\usepackage{cmap}
+\usepackage{natbib}
+\bibliographystyle{model2-names}
+% \biboptions{authoryear}
+
+\usepackage{xcolor}
+\definecolor{siva}{RGB}{100,200,255}
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfdefinestyle{nevyz}{%
+    linecolor=blue,
+    outerlinewidth=1pt,
+    roundcorner=10pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=10pt,
+    innerleftmargin=10pt,
+%     backgroundcolor=gray!30!white}
+    backgroundcolor=siva}
+
+   \mdfdefinestyle{vyz}{%
+    linecolor=red,
+    outerlinewidth=4pt,
+    roundcorner=10pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=10pt,
+    innerleftmargin=10pt,
+    backgroundcolor=white}
+%     backgroundcolor=white} 
+    
+\renewcommand{\baselinestretch}{1.5}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\SRule}{\rule{\linewidth}{0.2mm}}
+\newcommand{\dd}{\textrm{d}}
+\newcommand{\nd}{2$^{\textrm{nd}}$~}
+\newcommand{\st}{1$^{\textrm{st}}$~}
+\newcommand{\xth}{$^{\textrm{th}}$~}
+
+\newcommand{\cdr}{convection-diffusion-reaction equation}
+
+\newcommand{\highlight}[1]{%
+  \colorbox{red!50}{$\displaystyle#1$}}
+  
+\newcommand{\highlightr}[1]{%
+  \colorbox{red!60}{$\displaystyle#1$}}
+  
+  
+\newcommand{\highlightb}[1]{%
+  \colorbox{blue!40}{$\displaystyle#1$}}
+
+\newcommand{\highlightg}[1]{%
+  \colorbox{green!70}{$\displaystyle#1$}}
+  
+\newcommand{\highlightc}[1]{%
+  \colorbox{cyan!40}{$\displaystyle#1$}}
+  \newcommand{\fs}{\footnotesize}
+
+    \newcommand{\dg}{$^{\circ}$}
+    
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+
+\def\listofsymbols{\input{symbols} \clearpage}
+\def\addsymbol #1: #2#3{$#1$ \> \parbox{4.323in}{#2 \dotfill \pageref{#3}}\\}
+\def\newnot#1{\label{#1}} 
+\def\tvdots{\raisebox{3pt}{$\scalebox{.75}{\vdots}$}}
+%\begin{document}
+\pagestyle{fancy}
+
+\setcounter{secnumdepth}{3} 
+\setcounter{tocdepth}{3} 
+
+\rhead{\scriptsize\textsf{\rightmark}}
+\chead{}
+
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+% Macro for 'List of Symbols', 'List of Notations' etc...
+\def\listofsymbols{\input{symbols} \clearpage}
+\def\addsymbol #1: #2#3{$#1$ \> \parbox{4.323in}{#2 \dotfill \pageref{#3}}\\}
+\def\newnot#1{\label{#1}} 
+\def\tvdots{\raisebox{3pt}{$\scalebox{.75}{\vdots}$}}
+\usepackage{footnote}
+\usepackage[bottom]{footmisc}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+            
+\usepackage[scientific-notation=true]{siunitx} %VVV
+\sisetup{round-mode = places, round-precision = 3} %VVV
+
+ \usepackage[framemethod=TikZ]{mdframed}
+\mdfdefinestyle{important}{%
+    linecolor=blue,
+    outerlinewidth=1pt,
+    roundcorner=10pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=10pt,
+    innerleftmargin=10pt,
+%     backgroundcolor=gray!30!white}
+    backgroundcolor=siva}
+
+   \mdfdefinestyle{pedantic}{%
+    linecolor=red,
+    outerlinewidth=4pt,
+    roundcorner=10pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=10pt,
+    innerleftmargin=10pt,
+    backgroundcolor=white}
+%     backgroundcolor=white} 
+
+\newenvironment{columns}[1][]
+        {\setkeys{columns@col}{#1}
+         \noindent\begin{minipage}{\textwidth}}
+        {\end{minipage}\vspace{.5cm}}
+
+\newenvironment{column}[1]
+        {\begin{minipage}[t]{#1}}
+        {\end{minipage}}
+
+\usepackage{multirow}
+    
+    
+    \usepackage{lmodern}
+    \usepackage{courier}
+    
+\usepackage{listings}
+\lstset{language=[90]Fortran,
+basicstyle=\linespread{0.85}\footnotesize\ttfamily,
+  keywordstyle=\bfseries,
+  commentstyle=\color{olive}\textit,
+  numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=1,
+    breaklines=true,
+    breakatwhitespace=false,
+  morekeywords=[1]{class, abstract},
+  keywordstyle=[1]{\bfseries\color{blue}}
+%   basicstyle=\ttfamily,
+%   keywordstyle=\bfseries,
+%   commentstyle=\color{green},
+%   morecomment=[l]{!\ }, 
+%   numbers=left,
+%     stepnumber=1,
+%     showstringspaces=false,
+%     tabsize=1,
+%     breaklines=true,
+%     breakatwhitespace=false
+}
+
+\begin{document}
+
+
+
+
+\include{title}
+
+\include{1}
+
+
+
+\end{document}
