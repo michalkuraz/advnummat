@@ -3,12 +3,12 @@
 
 \section{Our equation}
 
-Many problems in engineering practise can be described by 
+Many problems in engineering practice can be described by 
 \begin{equation}
 \label{oureq}
  - (p u')' + q u = f,
 \end{equation}
- where $u$ is the solution, $p$ and $q$ are coeficients, $f$ is a scalar function.  It is known that solution of \eqref{oureq} 1) exist and 2) is unique, if $p > 0$ for the given boundary conditions
+ where $u$ is the solution, $p$ and $q$ are coefficients, $f$ is a scalar function.  It is known that solution of \eqref{oureq} 1) exist and 2) is unique, if $p > 0$ for the given boundary conditions
  \begin{equation}
  \label{dirbc}
   \begin{split}
@@ -32,7 +32,7 @@ or
      \beta_{0}u(1) + \beta_{1}u'(1) &= b ,
  \end{split} 
 \end{equation}
-where \eqref{dirbc} is a combination of Dirichlet conditions, \eqref{dirneubc} is a combination of Dirichlet and Neumann conditions, and \eqref{robinbc} is a combinatrion of mixed (Robin) conditions.
+where \eqref{dirbc} is a combination of Dirichlet conditions, \eqref{dirneubc} is a combination of Dirichlet and Neumann conditions, and \eqref{robinbc} is a combination of mixed (Robin) conditions.
 
 For more spatial dimensions \eqref{oureq} is formulated as
 \begin{equation}
@@ -41,7 +41,7 @@ For more spatial dimensions \eqref{oureq} is formulated as
 \end{equation}
 
 \section{Approximate solution}
-Since exact solution is often unknown, as direct integration is uin 
+Since exact solution is often unknown, as direct integration is in 
 many real world cases  impossible, an approximate solution to \eqref{oureq} or \eqref{oureqD} can be constructed out of polynomials and so
 \begin{equation}
 \label{bencheq}
@@ -56,7 +56,7 @@ if $n = 1$ then coefficients $\pi_{0,1}$ can be simply obtained from boundary co
    u_{1} &= p_{1}(1) = \pi_{1},
  \end{split} 
 \end{equation}
-it is apparent, that definition of $\pi_{0,1}$ satifying the given Dirichlet conditions has no relation to our equation!
+it is apparent, that definition of $\pi_{0,1}$ satisfying the given Dirichlet conditions has no relation to our equation!
 
 Let us assume the following benchmark example
 \begin{equation}
@@ -82,7 +82,7 @@ With increasing value of $n$ we can define a well known method for approximating
 The method can be demonstrated as follows.
 
 For polynomial approximation of degree $n=1$, solution is 
-apprioximated by \begin{equation}p_{1}(x) = \pi_{1}x + \pi_{0}\end{equation}, and so $\pi_{0}=1$. 
+approximated by \begin{equation}p_{1}(x) = \pi_{1}x + \pi_{0}\end{equation}, and so $\pi_{0}=1$. 
 The coefficient $\pi_{1}$ is obtained from the second boundary 
 condition and so
 \begin{equation}
@@ -117,9 +117,9 @@ $\pi_{0,1,2}$.
 Analogicaly for $n=3$, approximation polynomial is then
 \begin{equation}p_{3}(x) = \pi_{3}x^{3} + \pi_{2}x^{2} +\pi_{1}x + 
 \pi_{0},\end{equation} interior points will be then
-$x_{int_{1}}=\sfrac{1}{3}$ , and $x_{int_{2}}=\sfrac{2}{3}$. Simillar 
+$x_{int_{1}}=\sfrac{1}{3}$ , and $x_{int_{2}}=\sfrac{2}{3}$. Similar 
 system to \eqref{systemcolloc} is then assembled. Convergence of the 
-collocation emthod for the selected benchmark problem is apparent from 
+collocation method for the selected benchmark problem is apparent from 
 figure~\ref{collocconv}.
 \begin{figure}
 \centering
@@ -132,7 +132,7 @@ figure~\ref{collocconv}.
 The collocation method is an analogy to Lagrangian interpolation with the same quality properties  -- possibly divergent prone!!. A disputable approach, error is measured at discrete points, but we are searching for a continuous approximation!.
 
 
-Another approach for defining the error continously is {\it least square method} (later it will be defined as {\it least-square-finite-element-method} (here after LSFEM).
+Another approach for defining the error continuously is {\it least square method} (later it will be defined as {\it least-square-finite-element-method} (here after LSFEM).
 
 In order to simplify our notations our problem \eqref{oureq} will be expressed in terms on differential operator
 \begin{equation}
@@ -158,7 +158,7 @@ Another approach is
 \begin{equation}
  \int\limits_{0}^{1} (  -u'' + 4u  - \sin 3x )^{2} \dd x  + P_{0} (p_{n}(0)-u_{0})^{2} + P_{1} (p_{n}(1) - u_{1})^{2}\leadsto \mbox{min} ,
  \end{equation}
-where $P_{0,1}$ are penalization constants, by setting $P_{0,1}$ values we define how important satisfuing the boundatry conditions is, theretically if $P_{0,1} \leadsto \infty$ the boundary conditions are exactly satisfied, howerever, our solution becames independent on the governing equation.
+where $P_{0,1}$ are penalization constants, by setting $P_{0,1}$ values we define how important satisfying the boundary conditions is, theoretically if $P_{0,1} \leadsto \infty$ the boundary conditions are exactly satisfied, however, our solution became independent on the governing equation.
 
 The bottle neck of these methods is that it is difficult to relate these residuals to physical properties. And so yet another approach will be defined here. Let's define scalar product and our operator $L$ as
 \begin{equation}
@@ -177,7 +177,7 @@ Then let us define
  \end{equation}
  where $E$ is energy functional -- an energy of our system. There is a proof, which says that minimizing $E$ leads to a best approximation of our solution. Such method is referred to as Ritz method. 
  
- Problem with using just polynomials starts with more dimensions. It is still relatively simple to find polymonial satisfying given boundary conditions for rectangular.
+ Problem with using just polynomials starts with more dimensions. It is still relatively simple to find polynomial satisfying given boundary conditions for rectangular.
  
  \begin{center}
  \begin{tikzpicture}
@@ -202,10 +202,10 @@ Then let us define
  
  \begin{center}
  \rotatebox{0}{
- \includegraphics[width=4cm]{images1/lshape.jpeg}}
+ \includegraphics[width=4cm]{images1/lshape.eps}}
  \end{center}
 
  It is impossible to find polynomial, which satisfies the given boundary conditions.
  
- Solution -- discretization....
+
  
